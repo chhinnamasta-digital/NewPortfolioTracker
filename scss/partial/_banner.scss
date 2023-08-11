@@ -1,0 +1,13 @@
+.headerBanner{
+    position: relative;
+    max-height: 750px;
+    overflow: hidden;
+    .bannerimg{
+        img{
+            display: block;
+            max-width: 100%;
+            margin: 0 auto;
+            object-fit: cover;
+        }
+    }
+}

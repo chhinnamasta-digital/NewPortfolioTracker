@@ -1,0 +1,5 @@
+@mixin beforeAfter(){
+    content: '';
+    position: absolute;
+    @content;
+}
