@@ -6,6 +6,7 @@
 <body>
     <header>
         <?php include("includes/navigation.php"); ?>
+        <?php include("includes/banner.php"); ?>
     </header>
 
     <?php include("includes/footer.php"); ?>   

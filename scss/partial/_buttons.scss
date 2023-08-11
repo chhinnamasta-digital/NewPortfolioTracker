@@ -1,0 +1,22 @@
+.buttonContainer{
+    background: url(../assets/images/button.svg) no-repeat top left;
+    min-height: 68.086px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin-top: 52px;
+    .btnStyle{
+        color: #FFF;
+        font-family: Inter;
+        font-size: 20.91px;
+        font-style: normal;
+        font-weight: 400;
+        min-width: 198px;
+        text-align: center;
+        padding: 1rem 0;
+        span{
+            margin-right: 16px;
+        }
+    }
+}

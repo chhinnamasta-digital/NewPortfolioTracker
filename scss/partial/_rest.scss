@@ -17,9 +17,22 @@ body{
 a{
     text-decoration: none;
 }
-h1, h2, h3{
+h1, h2, h3, p{
     font-family: $font-Inter;
+    color: #fff;
 }
+h1{    
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    span{
+        display: block;
+    }
+}
+p{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;}
 ul{
     list-style: none;
     padding: 0;

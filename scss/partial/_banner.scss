@@ -1,12 +1,27 @@
-.headerBanner{
+.headerBannerContainer{   
+    padding-top: 175px; 
+    // background: url(../assets/images/banner.jpg), lightgray 0% 0% / 60.90909242630005px 60.90909242630005px repeat;
+    
+    min-height: 400px;
     position: relative;
-    max-height: 750px;
-    overflow: hidden;
-    .bannerimg{
+    &::after{
+        @include beforeAfter;
+        mix-blend-mode: overlay;
+        width: 100%;
+        height: 100%;
+    }
+    .headerBannerContent{
+        max-width: 838px;
+        // border: 1px solid red;
+        h1{
+            margin-bottom: 52px;
+        }
+    }
+    .bannerImg{
+        display: block;
+        margin-top: 45px;
         img{
-            display: block;
-            max-width: 100%;
-            margin: 0 auto;
+            width: 100%;
             object-fit: cover;
         }
     }

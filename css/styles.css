@@ -23,8 +23,24 @@ a {
   text-decoration: none;
 }
 
-h1, h2, h3 {
+h1, h2, h3, p {
   font-family: "Inter", sans-serif;
+  color: #fff;
+}
+
+h1 {
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+}
+h1 span {
+  display: block;
+}
+
+p {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
 }
 
 ul {
@@ -34,7 +50,6 @@ ul {
 
 nav {
   padding: 5px 0;
-  position: fixed;
   width: 100%;
   z-index: 999;
 }
@@ -86,16 +101,54 @@ nav .navigation-bar .divider {
   background-color: #fff;
 }
 
-.headerBanner {
+.headerBannerContainer {
+  padding-top: 175px;
+  min-height: 400px;
   position: relative;
-  max-height: 750px;
-  overflow: hidden;
 }
-.headerBanner .bannerimg img {
+.headerBannerContainer::after {
+  content: "";
+  position: absolute;
+  mix-blend-mode: overlay;
+  width: 100%;
+  height: 100%;
+}
+.headerBannerContainer .headerBannerContent {
+  max-width: 838px;
+}
+.headerBannerContainer .headerBannerContent h1 {
+  margin-bottom: 52px;
+}
+.headerBannerContainer .bannerImg {
   display: block;
-  max-width: 100%;
-  margin: 0 auto;
+  margin-top: 45px;
+}
+.headerBannerContainer .bannerImg img {
+  width: 100%;
   object-fit: cover;
+}
+
+.buttonContainer {
+  background: url(../assets/images/button.svg) no-repeat top left;
+  min-height: 68.086px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin-top: 52px;
+}
+.buttonContainer .btnStyle {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 20.91px;
+  font-style: normal;
+  font-weight: 400;
+  min-width: 198px;
+  text-align: center;
+  padding: 1rem 0;
+}
+.buttonContainer .btnStyle span {
+  margin-right: 16px;
 }
 
 /*# sourceMappingURL=styles.css.map */
