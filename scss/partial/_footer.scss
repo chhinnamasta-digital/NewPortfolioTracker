@@ -1,0 +1,57 @@
+footer{
+    position: relative;
+    margin-top: 70px;
+    .footerBlock{
+        ul{
+            li{
+                font-size: 20px;
+                font-style: normal;
+                a{
+                    color: $white;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+    form>.footerForm{
+        border-radius: 5.605px;
+        border: 0.467px solid #FFF;
+        display: flex;
+        align-items: center;
+        max-width: 480px;
+        input{
+            background: transparent;
+            border: none;
+            outline: none;
+            padding: 30px;
+            color: #fff;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            &:focus{
+                border: none;
+                outline: none;
+            }
+            &::placeholder{
+                text-transform: capitalize;
+            }
+        }
+        button{
+            border-radius: 5.605px;
+            background: #FFF;
+            padding: 8px 30px;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+        }
+    }
+}
+.copyright{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: right;
+    span{
+        font-weight: 100;
+    }
+}

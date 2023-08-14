@@ -1,0 +1,42 @@
+main{
+    
+    background: url('../assets/images/content-bg.jpg') no-repeat;    
+    background-position: right top;
+    background-size: contain;
+    background-position: top -11px center;
+    background-size: cover;
+}
+.automatedContainer{
+    // margin-top: 187px;
+}
+.automatedContent{
+    margin-top: 360px;
+}
+.trackGlobalContainer, .trackGlobalContainer2{
+    // background: url('../assets/images/Rectangle.svg') no-repeat;    
+    background-position: right top;
+    background-size: contain;
+    margin-top: 152px;
+
+    [class*='col-']>object{
+        visibility: hidden;
+    }
+}
+.trackGlobalContainer2{
+    // background: url('../assets/images/circle.svg') no-repeat;     
+    background-position: left top;
+    background-size: contain;
+    padding-bottom: 30px;
+}
+.thousand-thousand{
+    margin-top: 152px;
+    .automatedContent{
+        @include min_max(1600px, 2550px){
+            width: 65%;
+        }
+    }
+}
+
+.bgSetPosRight{        
+    background-position: right top !important;
+}

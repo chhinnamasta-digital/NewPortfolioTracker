@@ -17,6 +17,8 @@ body {
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
   background-color: #000000;
+  background-size: cover;
+  background-position: top center;
 }
 
 a {
@@ -28,12 +30,13 @@ h1, h2, h3, p {
   color: #fff;
 }
 
-h1 {
+h1, h2 {
   font-size: 64px;
   font-style: normal;
   font-weight: 700;
+  margin-bottom: 52px;
 }
-h1 span {
+h1 span, h2 span {
   display: block;
 }
 
@@ -103,6 +106,9 @@ nav .navigation-bar .divider {
 
 .headerBannerContainer {
   padding-top: 175px;
+  background: url(../assets/images/header-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: top -208px right;
   min-height: 400px;
   position: relative;
 }
@@ -112,12 +118,11 @@ nav .navigation-bar .divider {
   mix-blend-mode: overlay;
   width: 100%;
   height: 100%;
+  z-index: -1;
+  background-color: lightgray 0% 0%/60.9090924263px 60.9090924263px;
 }
 .headerBannerContainer .headerBannerContent {
   max-width: 838px;
-}
-.headerBannerContainer .headerBannerContent h1 {
-  margin-bottom: 52px;
 }
 .headerBannerContainer .bannerImg {
   display: block;
@@ -126,6 +131,46 @@ nav .navigation-bar .divider {
 .headerBannerContainer .bannerImg img {
   width: 100%;
   object-fit: cover;
+}
+
+main {
+  background: url("../assets/images/content-bg.jpg") no-repeat;
+  background-position: right top;
+  background-size: contain;
+  background-position: top -11px center;
+  background-size: cover;
+}
+
+.automatedContent {
+  margin-top: 360px;
+}
+
+.trackGlobalContainer, .trackGlobalContainer2 {
+  background-position: right top;
+  background-size: contain;
+  margin-top: 152px;
+}
+.trackGlobalContainer [class*=col-] > object, .trackGlobalContainer2 [class*=col-] > object {
+  visibility: hidden;
+}
+
+.trackGlobalContainer2 {
+  background-position: left top;
+  background-size: contain;
+  padding-bottom: 30px;
+}
+
+.thousand-thousand {
+  margin-top: 152px;
+}
+@media only screen and (min-width: 1600px) and (max-width: 2550px) {
+  .thousand-thousand .automatedContent {
+    width: 65%;
+  }
+}
+
+.bgSetPosRight {
+  background-position: right top !important;
 }
 
 .buttonContainer {
@@ -149,6 +194,61 @@ nav .navigation-bar .divider {
 }
 .buttonContainer .btnStyle span {
   margin-right: 16px;
+}
+
+footer {
+  position: relative;
+  margin-top: 70px;
+}
+footer .footerBlock ul li {
+  font-size: 20px;
+  font-style: normal;
+}
+footer .footerBlock ul li a {
+  color: #ffffff;
+  font-weight: 300;
+}
+footer form > .footerForm {
+  border-radius: 5.605px;
+  border: 0.467px solid #FFF;
+  display: flex;
+  align-items: center;
+  max-width: 480px;
+}
+footer form > .footerForm input {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 30px;
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+}
+footer form > .footerForm input:focus {
+  border: none;
+  outline: none;
+}
+footer form > .footerForm input::placeholder {
+  text-transform: capitalize;
+}
+footer form > .footerForm button {
+  border-radius: 5.605px;
+  background: #FFF;
+  padding: 8px 30px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.copyright {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  text-align: right;
+}
+.copyright span {
+  font-weight: 100;
 }
 
 /*# sourceMappingURL=styles.css.map */

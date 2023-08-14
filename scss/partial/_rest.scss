@@ -12,7 +12,10 @@ body{
     margin: 0;
     box-sizing: border-box;
     font-family: $font-Inter;
+    // background: $black url(../assets/images/body-bg.jpg) no-repeat;
     background-color: $black;
+    background-size: cover;
+    background-position: top center;
 }
 a{
     text-decoration: none;
@@ -21,10 +24,11 @@ h1, h2, h3, p{
     font-family: $font-Inter;
     color: #fff;
 }
-h1{    
+h1,h2{    
     font-size: 64px;
     font-style: normal;
     font-weight: 700;
+    margin-bottom: 52px;
     span{
         display: block;
     }

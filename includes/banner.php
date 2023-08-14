@@ -9,7 +9,7 @@
                         <a href="#" target="_self" rel="noopener noreferrer" class="btnStyle"><span>Explore</span></a>
                     </div>
                     <div class="bannerImg">
-                        <img src="<?=$url_?>assets/images/banner.jpg" alt="Banner Img">
+                        <img src="<?=$url_?>assets/images/banner.png" alt="Banner Img">
                     </div>
                 </div>
             </div>
