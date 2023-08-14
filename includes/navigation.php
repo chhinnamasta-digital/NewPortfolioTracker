@@ -2,7 +2,7 @@
   <div class="container">    
     <div class="navigation-bar">      
       <ul class="navbarCollpase ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
@@ -18,10 +18,10 @@
       <div class="divider"></div>
       <ul class="userLoging">        
         <li class="nav-item">
-          <a class="nav-link" href="#">Log in</a>
+          <a class="nav-link" href="<?=$url_?>login.php">Log in</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="#">Sign up</a>
+          <a class="nav-link " href="<?=$url_?>signup.php">Sign up</a>
         </li>
       </ul>
     </div>

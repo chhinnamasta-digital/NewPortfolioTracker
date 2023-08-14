@@ -36,11 +36,12 @@ nav{
                         color: $color3;
                     }
                 }
-                &:hover{
+                &:hover, &.active{
                     a{
-                        color: $color3;
+                        color: red;
                     }
                 }
+                
             }
         }
         .userLoging{

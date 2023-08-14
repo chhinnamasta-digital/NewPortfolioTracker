@@ -92,8 +92,8 @@ nav .navigation-bar ul li a {
 nav .navigation-bar ul li a.active {
   color: #fff;
 }
-nav .navigation-bar ul li:hover a {
-  color: #fff;
+nav .navigation-bar ul li:hover a, nav .navigation-bar ul li.active a {
+  color: red;
 }
 nav .navigation-bar .userLoging li {
   font-weight: 700;
@@ -126,7 +126,7 @@ nav .navigation-bar .divider {
 }
 .headerBannerContainer .bannerImg {
   display: block;
-  margin-top: 45px;
+  margin-top: 100px;
 }
 .headerBannerContainer .bannerImg img {
   width: 100%;
@@ -196,6 +196,159 @@ main {
   margin-right: 16px;
 }
 
+.loginBody {
+  background: url("../assets/images/authenticate.jpg") no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+.loginContainer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 23px;
+  padding: 40px 90px;
+  width: 615px;
+  backdrop-filter: blur(6px);
+  overflow: hidden;
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .loginContainer {
+    padding: 30px 90px;
+  }
+}
+.loginContainer .loginGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto;
+  text-align: center;
+  grid-gap: 1rem;
+}
+@media only screen and (min-width: 992px) and (max-width: 1600px) {
+  .loginContainer .loginGrid {
+    grid-gap: 0.1rem;
+  }
+}
+.loginContainer .loginGrid .loginWithGoogle a {
+  width: 100%;
+}
+.loginContainer .loginGrid .loginWithGoogle a img {
+  width: 100%;
+  object-fit: cover;
+}
+.loginContainer .loginHeading h2 {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+@media only screen and (min-width: 992px) and (max-width: 1600px) {
+  .loginContainer .loginHeading h2 {
+    margin-bottom: 25px;
+  }
+}
+.loginContainer .loginForm {
+  max-width: 424px;
+}
+.loginContainer .loginForm form .formFields input {
+  background-color: transparent;
+  border-radius: 3px;
+  border: 1px solid #D9D9D9;
+  height: 59px;
+  width: 100%;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 100;
+  padding: 12px 25px;
+  margin-bottom: 14px;
+}
+.loginContainer .loginForm form .formFields input::placeholder {
+  color: #FFF;
+}
+.loginContainer .loginForm form .formFields input:focus {
+  outline: none;
+}
+.loginContainer .loginForm form .rememberBox {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+.loginContainer .loginForm form .rememberBox input[type=checkbox] {
+  width: 24px;
+  height: 23px;
+  margin-bottom: 0;
+}
+.loginContainer .loginForm form .rememberBox label {
+  color: #7D7B7B;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  margin-left: 12px;
+}
+.loginContainer .loginForm form button {
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  background: #EB1C2E;
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-top: 50px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1600px) {
+  .loginContainer .loginForm form button {
+    margin-top: 30px;
+  }
+}
+.loginContainer .loginForgot {
+  margin-top: 50px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1600px) {
+  .loginContainer .loginForgot {
+    margin-top: 30px;
+  }
+}
+.loginContainer .loginForgot a {
+  color: #7D7B7B;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration-line: underline;
+  display: block;
+  text-align: left;
+}
+.loginContainer p {
+  color: #D9D9D9;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+.loginContainer::after {
+  content: "";
+  position: absolute;
+  background-color: #bdbdbd;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.2;
+}
+
 footer {
   position: relative;
   margin-top: 70px;
@@ -219,7 +372,7 @@ footer form > .footerForm input {
   background: transparent;
   border: none;
   outline: none;
-  padding: 30px;
+  padding: 16px 30px;
   color: #fff;
   font-size: 20px;
   font-style: normal;
