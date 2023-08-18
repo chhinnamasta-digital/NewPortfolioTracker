@@ -10,7 +10,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <title><?= (isset($title[0]) &&  $title[0] != '') ? $title[0] : ""; ?></title>
+    <link rel="icon" type="image/x-icon" href="<?=$url_?>assets/images/favicon.ico">
+    <title><?= (isset($title[0]) &&  $title[0] != '') ? $title[0] : "$title"; ?></title>
     <meta name="description" content="<?= (isset($description[0]) && $description[0] != '') ? $description[0] : ""; ?>">
     <meta name="keywords" content="<?= (isset($keywords[0]) && $keywords[0] != '') ? $keywords[0] : ""; ?>">
 

@@ -16,10 +16,13 @@ main{
     // background: url('../assets/images/Rectangle.svg') no-repeat;    
     background-position: right top;
     background-size: contain;
-    margin-top: 152px;
+    margin-top: 50px;
 
     [class*='col-']>object{
         visibility: hidden;
+    }
+    @include min_max(991px, 1523px){
+        margin-top: 0;
     }
 }
 .trackGlobalContainer2{
@@ -27,11 +30,12 @@ main{
     background-position: left top;
     background-size: contain;
     padding-bottom: 30px;
+    -webkit-padding-after: 190px;
 }
 .thousand-thousand{
     margin-top: 152px;
     .automatedContent{
-        @include min_max(1600px, 2550px){
+        @include min_max(992px, 2550px){
             width: 65%;
         }
     }

@@ -112,6 +112,11 @@ nav .navigation-bar .divider {
   min-height: 400px;
   position: relative;
 }
+@media only screen and (min-width: 991px) and (max-width: 1523px) {
+  .headerBannerContainer {
+    background-position-y: -180px;
+  }
+}
 .headerBannerContainer::after {
   content: "";
   position: absolute;
@@ -148,22 +153,28 @@ main {
 .trackGlobalContainer, .trackGlobalContainer2 {
   background-position: right top;
   background-size: contain;
-  margin-top: 152px;
+  margin-top: 50px;
 }
 .trackGlobalContainer [class*=col-] > object, .trackGlobalContainer2 [class*=col-] > object {
   visibility: hidden;
+}
+@media only screen and (min-width: 991px) and (max-width: 1523px) {
+  .trackGlobalContainer, .trackGlobalContainer2 {
+    margin-top: 0;
+  }
 }
 
 .trackGlobalContainer2 {
   background-position: left top;
   background-size: contain;
   padding-bottom: 30px;
+  -webkit-padding-after: 190px;
 }
 
 .thousand-thousand {
   margin-top: 152px;
 }
-@media only screen and (min-width: 1600px) and (max-width: 2550px) {
+@media only screen and (min-width: 992px) and (max-width: 2550px) {
   .thousand-thousand .automatedContent {
     width: 65%;
   }
@@ -207,14 +218,14 @@ main {
   top: 50%;
   transform: translate(-50%, -50%);
   border-radius: 23px;
-  padding: 40px 90px;
+  padding: 36px 90px;
   width: 615px;
   backdrop-filter: blur(6px);
   overflow: hidden;
 }
 @media only screen and (min-width: 0px) and (max-width: 767px) {
   .loginContainer {
-    padding: 30px 90px;
+    padding: 25px 90px;
   }
 }
 .loginContainer .loginGrid {
@@ -224,16 +235,19 @@ main {
   text-align: center;
   grid-gap: 1rem;
 }
-@media only screen and (min-width: 992px) and (max-width: 1600px) {
+@media only screen and (min-width: 992px) and (max-width: 1523px) {
   .loginContainer .loginGrid {
     grid-gap: 0.1rem;
   }
 }
 .loginContainer .loginGrid .loginWithGoogle a {
+  display: block;
   width: 100%;
+  height: 100%;
 }
 .loginContainer .loginGrid .loginWithGoogle a img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 .loginContainer .loginHeading h2 {
@@ -243,20 +257,31 @@ main {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-@media only screen and (min-width: 992px) and (max-width: 1600px) {
+@media only screen and (min-width: 992px) and (max-width: 1523px) {
   .loginContainer .loginHeading h2 {
     margin-bottom: 25px;
   }
 }
+.loginContainer .loginHeading h2 a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
 .loginContainer .loginForm {
   max-width: 424px;
+}
+.loginContainer .loginForm form .formFields {
+  position: relative;
 }
 .loginContainer .loginForm form .formFields input {
   background-color: transparent;
   border-radius: 3px;
   border: 1px solid #D9D9D9;
-  height: 59px;
+  height: 50px;
   width: 100%;
   color: #FFF;
   font-family: Inter;
@@ -271,6 +296,12 @@ main {
 }
 .loginContainer .loginForm form .formFields input:focus {
   outline: none;
+}
+@media only screen and (min-width: 991px) and (max-width: 1523px) {
+  .loginContainer .loginForm form .formFields input {
+    height: 40px;
+    font-size: 16px;
+  }
 }
 .loginContainer .loginForm form .rememberBox {
   display: flex;
@@ -305,19 +336,19 @@ main {
   font-style: normal;
   font-weight: 600;
   text-transform: capitalize;
-  margin-top: 50px;
+  margin-top: 40px;
 }
-@media only screen and (min-width: 992px) and (max-width: 1600px) {
+@media only screen and (min-width: 992px) and (max-width: 1523px) {
   .loginContainer .loginForm form button {
-    margin-top: 30px;
+    margin-top: 20px;
   }
 }
 .loginContainer .loginForgot {
-  margin-top: 50px;
+  margin-top: 35px;
 }
-@media only screen and (min-width: 992px) and (max-width: 1600px) {
+@media only screen and (min-width: 992px) and (max-width: 1523px) {
   .loginContainer .loginForgot {
-    margin-top: 30px;
+    margin-top: 25px;
   }
 }
 .loginContainer .loginForgot a {
@@ -326,7 +357,7 @@ main {
   font-style: normal;
   font-weight: 400;
   text-decoration-line: underline;
-  display: block;
+  display: table;
   text-align: left;
 }
 .loginContainer p {
@@ -349,9 +380,164 @@ main {
   opacity: 0.2;
 }
 
+.formFields > i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: none;
+  z-index: 99;
+}
+.formFields > i::after {
+  background-color: #fff;
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 1px;
+  border-radius: 50%;
+  z-index: -99;
+}
+
+.messageError > i, .messageSuccess > i {
+  font-size: 22px;
+  align-items: center;
+  justify-content: center;
+}
+
+.messageError input {
+  border: 1px solid red !important;
+}
+.messageError i.fa-exclamation-circle {
+  display: flex;
+  color: red;
+}
+
+.messageSuccess input {
+  border: 1px solid green !important;
+}
+.messageSuccess i.fa-check-circle {
+  display: flex;
+  color: green;
+}
+
+.messageBox p {
+  color: #f38d96;
+  padding-bottom: 20px;
+}
+
+#success p {
+  margin-top: 20px;
+  background: black;
+  padding: 0.5rem;
+  border-radius: 7px;
+}
+
+.dashboard-outlet {
+  width: 90%;
+  top: 0;
+  transform: translate(-50%, 0%);
+  margin: 40px 0;
+  padding: 36px 0px;
+}
+.dashboard-outlet .dashboard-grid {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  grid-gap: 1rem;
+}
+.dashboard-outlet .dashboard-grid .dashboard-left-side-outlet, .dashboard-outlet .dashboard-grid .dashboard-right-side-outlet {
+  padding: 40px;
+  position: relative;
+}
+.dashboard-outlet .dashboard-grid .dashboard-left-side-outlet {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+.dashboard-outlet .dashboard-grid .dashboard-left-side-outlet .logo object {
+  display: block;
+  margin: 0 auto;
+}
+.dashboard-outlet .dashboard-grid .dashboard-left-side-outlet .net-worth {
+  margin-top: 80px;
+}
+.dashboard-outlet .dashboard-grid .dashboard-left-side-outlet .net-worth p {
+  color: #000;
+  font-size: 18.913px;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.dashboard-outlet .dashboard-grid .dashboard-left-side-outlet .net-worth h2 {
+  color: #000;
+  font-family: Inter;
+  font-size: 60.52px;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.dashboard-outlet .dashboard-grid .dashboard-left-side-outlet .dashboard-menu ul li {
+  font-size: 18.913px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 50px;
+}
+.dashboard-outlet .dashboard-grid .dashboard-left-side-outlet .dashboard-menu ul li a {
+  color: #FFFEFE;
+  display: flex;
+  align-items: center;
+  grid-column-gap: 1rem;
+}
+.dashboard-outlet .dashboard-grid .dashboard-left-side-outlet::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  background: linear-gradient(45deg, transparent, #fff, transparent);
+  right: 5px;
+}
+.dashboard-outlet .dashboard-grid .dashboard-right-side-outlet .dashboard-block {
+  display: block;
+}
+.dashboard-outlet .dashboard-grid .dashboard-right-side-outlet .dashboard-block .user-manage-header {
+  display: flex;
+  flex-flow: wrap row;
+  align-items: center;
+  justify-content: space-between;
+}
+.dashboard-outlet .dashboard-grid .dashboard-right-side-outlet .dashboard-block .user-manage-header .username, .dashboard-outlet .dashboard-grid .dashboard-right-side-outlet .dashboard-block .user-manage-header .user-assets {
+  border: 1px solid red;
+}
+.dashboard-outlet .dashboard-grid .dashboard-right-side-outlet .dashboard-block .user-manage-header .username h4 {
+  margin-bottom: 0;
+}
+.dashboard-outlet .dashboard-grid .dashboard-right-side-outlet .dashboard-block .user-manage-header .user-assets ul {
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+.dashboard-outlet .dashboard-grid .dashboard-right-side-outlet .dashboard-block .user-manage-header .user-assets ul li {
+  margin-right: 12px;
+  font-size: 18.913px;
+  font-style: normal;
+  font-weight: 300;
+}
+.dashboard-outlet .dashboard-grid .dashboard-right-side-outlet .dashboard-block .user-manage-header .user-assets ul li a {
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.dashboard-outlet .dashboard-grid .dashboard-right-side-outlet .dashboard-block .user-manage-header .user-assets ul li:last-child {
+  margin-right: 0;
+}
+.dashboard-outlet .dashboard-grid .dashboard-right-side-outlet .dashboard-block .user-manage-header .user-assets ul li:nth-of-type(1) {
+  background-color: #000;
+}
+
 footer {
   position: relative;
   margin-top: 70px;
+  background: green;
 }
 footer .footerBlock ul li {
   font-size: 20px;

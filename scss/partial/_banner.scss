@@ -5,6 +5,9 @@
     background-position: top -208px right;    
     min-height: 400px;
     position: relative;
+    @include min_max(991px, 1523px){
+        background-position-y: -180px;
+    }
     &::after{
         @include beforeAfter;
         mix-blend-mode: overlay;
