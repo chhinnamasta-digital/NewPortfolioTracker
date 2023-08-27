@@ -1,10 +1,9 @@
 <?php
     include("../php-functions/functions.php"); 
-    $u_login_user = mysqli_real_escape_string($conn, $_POST['userName']);
     $u_loging_email = mysqli_real_escape_string($conn, $_POST['userEmail']);
     $u_login_pass = $_POST['userPass'];
 
-    if($u_login_user == '' || $u_loging_email == '' || $u_login_pass == ''){
+    if($u_loging_email == '' || $u_login_pass == ''){
         $response = ["message" => "All Fields Required", "status" => false];
     }
     else{        
@@ -17,12 +16,13 @@
             
             $fetch_password = mysqli_fetch_array($select_auth_query);
             $userId = $fetch_password['id'];
-            // $userType = $fetch_password['ssc_userType'];
+            $user_name = $fetch_password['user_name'];
             $passwordMatch = password_verify($u_login_pass, $fetch_password['user_password']);
             if($passwordMatch == 1){ 
                    
                 $_SESSION['sessionUserEmail'] = $u_loging_email;
                 $_SESSION['sessionUserId'] = $userId;
+                $_SESSION['sessionUserName'] = $user_name;
     
                 // select if user not fill the start company form
                 // if($userType == "start company"){

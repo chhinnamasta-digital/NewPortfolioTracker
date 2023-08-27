@@ -1,0 +1,31 @@
+<svg width="62" height="61" viewBox="0 0 62 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 68">
+<g id="Ellipse 438">
+<circle cx="31.1797" cy="30.5" r="30.0272" fill="url(#paint0_linear_105_812)"/>
+<circle cx="31.1797" cy="30.5" r="30.0272" stroke="url(#paint1_radial_105_812)" stroke-width="0.945632"/>
+<circle cx="31.1797" cy="30.5" r="30.0272" stroke="url(#paint2_radial_105_812)" stroke-width="0.945632"/>
+</g>
+<g id="article">
+<mask id="mask0_105_812" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="16" y="16" width="31" height="30">
+<rect id="Bounding box" x="16.6797" y="16" width="30" height="30" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_105_812)">
+<path id="article_2" d="M25.4297 37.25H34.1797V34.75H25.4297V37.25ZM25.4297 32.25H37.9297V29.75H25.4297V32.25ZM25.4297 27.25H37.9297V24.75H25.4297V27.25ZM22.9297 42.25C22.2422 42.25 21.6536 42.0052 21.1641 41.5156C20.6745 41.026 20.4297 40.4375 20.4297 39.75V22.25C20.4297 21.5625 20.6745 20.974 21.1641 20.4844C21.6536 19.9948 22.2422 19.75 22.9297 19.75H40.4297C41.1172 19.75 41.7057 19.9948 42.1953 20.4844C42.6849 20.974 42.9297 21.5625 42.9297 22.25V39.75C42.9297 40.4375 42.6849 41.026 42.1953 41.5156C41.7057 42.0052 41.1172 42.25 40.4297 42.25H22.9297ZM22.9297 39.75H40.4297V22.25H22.9297V39.75Z" fill="white"/>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_105_812" x1="17.9322" y1="-20.1838" x2="74.6914" y2="-13.9996" gradientUnits="userSpaceOnUse">
+<stop offset="0.00554471" stop-color="white" stop-opacity="0.15"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+<radialGradient id="paint1_radial_105_812" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(31.1797 30.5) rotate(90) scale(30.5 0)">
+<stop stop-color="#0F0F0F"/>
+<stop offset="1" stop-color="#151515" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint2_radial_105_812" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(18.6797 26.5) rotate(70.0836) scale(36.6947 125.07)">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>

@@ -18,13 +18,13 @@
             <div class="loginForm">
                 <form action="<?=$_SERVER['PHP_SELF'];?>" id="loginForm" method="post" autocomplete="off">
                     <div class="formFields">
-                        <input type="text" name="loginName" placeholder="Name" id="username">
+                        <input type="text" name="loginEmail" placeholder="Email" id="userEmail">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i> 
                             <div class="messageBox"></div> 
                     </div>
                     <div class="formFields">
-                        <input type="password" name="loginPass" placeholder="Password" id="userpass">
+                        <input type="password" name="loginPass" placeholder="Password" id="loginUserpass">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i> 
                             <div class="messageBox"></div> 

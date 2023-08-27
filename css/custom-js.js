@@ -169,4 +169,48 @@ $(function(){
         $("#"+id).closest(".formFields").addClass("messageSuccess").removeClass("messageError");
         $("#"+id).closest(".formFields").children(".messageBox").html(" ");
     }
+
+    // Dashboard Script Add Assets list
+
+    let addList = document.querySelectorAll(".add-assets-block .assets-list ul>li");
+    addList.forEach(function(items){
+        items.addEventListener("click", function(){
+            const assetsListId = $(items).attr("data-list-id");  
+
+            // enable search tab
+            const activeBlockId = $(".selectedAssetsForm").children("div");
+            $.each(activeBlockId, function(index, items){
+                const _idAttr = $(items).attr("id");
+                if(assetsListId == _idAttr){
+                    $(this).fadeIn().siblings().fadeOut();
+                }
+            })
+        })
+    })
+
+    // Fetch Crypto data from api Function
+    let _selectOption = document.querySelector(".cryptoBlock #asset-name-list");
+    let searchNameInput = document.querySelector(".cryptoBlock .search-name");
+  
+    searchNameInput.addEventListener("input", function(e){
+        const searchValue = $(".cryptoBlock .search-name").val();
+        $(".cryptoBlock #asset-name-list").html("");
+
+        let expression = new RegExp(searchValue, "i");
+        $.getJSON("https://dummyjson.com/products", function(data){            
+            $.each(data.products, function(index, value){
+                // console.warn(value.title.search(expression)) // if no record match then display -1
+                if(value.title.search(expression) != -1){
+                    $(".cryptoBlock #asset-name-list").append('<li>'+value.title+'</li>');                    
+                }
+            })            
+        })        
+    }) 
+
+    $(document).on("click", ".cryptoBlock #asset-name-list>li", function(){
+        // console.warn($(this));
+        $(".cryptoBlock .search-name").val($(this).text());
+        $(".cryptoBlock #asset-name-list").html("");
+    })
+
 })

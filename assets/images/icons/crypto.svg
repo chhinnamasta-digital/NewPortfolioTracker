@@ -1,0 +1,31 @@
+<svg width="62" height="61" viewBox="0 0 62 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 68">
+<g id="Ellipse 438">
+<circle cx="31.1797" cy="30.5" r="30.0272" fill="url(#paint0_linear_105_819)"/>
+<circle cx="31.1797" cy="30.5" r="30.0272" stroke="url(#paint1_radial_105_819)" stroke-width="0.945632"/>
+<circle cx="31.1797" cy="30.5" r="30.0272" stroke="url(#paint2_radial_105_819)" stroke-width="0.945632"/>
+</g>
+<g id="currency_bitcoin">
+<mask id="mask0_105_819" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="16" y="16" width="31" height="30">
+<rect id="Bounding box" x="16.6797" y="16" width="30" height="30" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_105_819)">
+<path id="currency_bitcoin_2" d="M27.9297 42.25V39.75H24.1797V37.25H26.6797V24.75H24.1797V22.25H27.9297V19.75H30.4297V22.25H32.9297V19.75H35.4297V22.4062C36.513 22.6979 37.4089 23.2865 38.1172 24.1719C38.8255 25.0573 39.1797 26.0833 39.1797 27.25C39.1797 27.8542 39.0755 28.4323 38.8672 28.9844C38.6589 29.5365 38.3672 30.0312 37.9922 30.4688C38.7214 30.9062 39.3099 31.5 39.7578 32.25C40.2057 33 40.4297 33.8333 40.4297 34.75C40.4297 36.125 39.9401 37.3021 38.9609 38.2812C37.9818 39.2604 36.8047 39.75 35.4297 39.75V42.25H32.9297V39.75H30.4297V42.25H27.9297ZM29.1797 29.75H34.1797C34.8672 29.75 35.4557 29.5052 35.9453 29.0156C36.4349 28.526 36.6797 27.9375 36.6797 27.25C36.6797 26.5625 36.4349 25.974 35.9453 25.4844C35.4557 24.9948 34.8672 24.75 34.1797 24.75H29.1797V29.75ZM29.1797 37.25H35.4297C36.1172 37.25 36.7057 37.0052 37.1953 36.5156C37.6849 36.026 37.9297 35.4375 37.9297 34.75C37.9297 34.0625 37.6849 33.474 37.1953 32.9844C36.7057 32.4948 36.1172 32.25 35.4297 32.25H29.1797V37.25Z" fill="white"/>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_105_819" x1="17.9322" y1="-20.1838" x2="74.6914" y2="-13.9996" gradientUnits="userSpaceOnUse">
+<stop offset="0.00554471" stop-color="white" stop-opacity="0.15"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+<radialGradient id="paint1_radial_105_819" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(31.1797 30.5) rotate(90) scale(30.5 0)">
+<stop stop-color="#0F0F0F"/>
+<stop offset="1" stop-color="#151515" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint2_radial_105_819" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(18.6797 26.5) rotate(70.0836) scale(36.6947 125.07)">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>

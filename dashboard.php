@@ -1,6 +1,7 @@
-<?php 
+<?php  
     $pageID = 5;        
-    include("includes/header.php"); 
+    include("includes/header.php");     
+    include("includes/sessions.php");
 ?>
 </head>
 <body class="loginBody">
@@ -42,32 +43,32 @@
                     <div class="dashboard-block">
                         <div class="user-manage-header">
                             <div class="username">
-                                <h4>Hello, Roni</h4>
+                                <h4>Hello, <?=$sessionUserName?></h4>
                             </div>
                             <div class="user-assets">
                                 <ul>
                                     <li>
-                                        <a href="<?=$url_?>">
+                                        <a href="<?=$url_?>add-assets.php" class="add-assets-btn">
                                             <span>Add assets</span>
                                             <object data="<?=$url_?>assets/images/icons/add.svg"" type=""></object>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="<?=$url_?>">
-                                            <span>add</span>
+                                        <a href="<?=$url_?>" class="manage-btn">
+                                            <span>Manage</span>
                                             <object data="<?=$url_?>assets/images/icons/manage.svg"" type=""></object>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="<?=$url_?>">
-                                            <span>add</span>
+                                            <span></span>
                                             <object data="<?=$url_?>assets/images/icons/notify.svg"" type=""></object>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="<?=$url_?>">
-                                            <span>add</span>
-                                            <object data="<?=$url_?>assets/images/icons/help.svg"" type=""></object>
+                                            <span></span>
+                                            <img src="<?=$url_?>assets/images/user.png"" class="img-fluid" />
                                         </a>
                                     </li>
                                 </ul>
@@ -75,9 +76,11 @@
                         </div>
                     </div>                    
                 </div>
+                <?php include("includes/dashboard-footer.php"); ?> 
             </div>
-        </div>
+        </div>        
      </section>
+    
     <?php include("includes/footer.php"); ?>   
 </body>
 </html>

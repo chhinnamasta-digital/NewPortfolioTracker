@@ -207,6 +207,29 @@ main {
   margin-right: 16px;
 }
 
+.add-assets-btn, .manage-btn {
+  display: inline-flex;
+  padding: 18.913px 23.641px 20.804px 37.825px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 7.802px;
+  color: #FFF;
+  font-size: 18.913px;
+  font-style: normal;
+  font-weight: 300;
+  border-radius: 7.565px;
+}
+
+.add-assets-btn {
+  background: #000;
+}
+
+.manage-btn {
+  border-radius: 7.565px;
+  border: 0.946px solid #000;
+  color: #000000 !important;
+}
+
 .loginBody {
   background: url("../assets/images/authenticate.jpg") no-repeat;
   background-size: cover;
@@ -439,6 +462,8 @@ main {
   transform: translate(-50%, 0%);
   margin: 40px 0;
   padding: 36px 0px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 .dashboard-outlet .dashboard-grid {
   display: grid;
@@ -505,11 +530,11 @@ main {
   align-items: center;
   justify-content: space-between;
 }
-.dashboard-outlet .dashboard-grid .dashboard-right-side-outlet .dashboard-block .user-manage-header .username, .dashboard-outlet .dashboard-grid .dashboard-right-side-outlet .dashboard-block .user-manage-header .user-assets {
-  border: 1px solid red;
-}
 .dashboard-outlet .dashboard-grid .dashboard-right-side-outlet .dashboard-block .user-manage-header .username h4 {
   margin-bottom: 0;
+  font-size: 30.26px;
+  font-style: normal;
+  font-weight: 300;
 }
 .dashboard-outlet .dashboard-grid .dashboard-right-side-outlet .dashboard-block .user-manage-header .user-assets ul {
   margin-bottom: 0;
@@ -517,10 +542,11 @@ main {
   align-items: center;
 }
 .dashboard-outlet .dashboard-grid .dashboard-right-side-outlet .dashboard-block .user-manage-header .user-assets ul li {
-  margin-right: 12px;
+  margin-right: 20px;
   font-size: 18.913px;
   font-style: normal;
   font-weight: 300;
+  position: relative;
 }
 .dashboard-outlet .dashboard-grid .dashboard-right-side-outlet .dashboard-block .user-manage-header .user-assets ul li a {
   color: #fff;
@@ -530,14 +556,280 @@ main {
 .dashboard-outlet .dashboard-grid .dashboard-right-side-outlet .dashboard-block .user-manage-header .user-assets ul li:last-child {
   margin-right: 0;
 }
-.dashboard-outlet .dashboard-grid .dashboard-right-side-outlet .dashboard-block .user-manage-header .user-assets ul li:nth-of-type(1) {
+.dashboard-outlet .dashboard-grid .dashboard-right-side-outlet .dashboard-block .user-manage-header .user-assets ul li:nth-last-of-type(2) {
+  margin-left: 60px;
+}
+.dashboard-outlet .dashboard-grid .dashboard-right-side-outlet .dashboard-block .user-manage-header .user-assets ul li:last-child {
+  z-index: 9;
+  margin-left: 12px;
+}
+.dashboard-outlet .dashboard-grid .dashboard-right-side-outlet .dashboard-block .user-manage-header .user-assets ul li:last-child::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  z-index: -9;
+}
+.dashboard-outlet .dashboard-grid .dashboard-right-side-outlet .dashboard-block .user-manage-header .user-assets ul li:last-child a {
+  height: 37px;
+  width: 37px;
+}
+.dashboard-outlet .dashboard-grid .dashboard-right-side-outlet .dashboard-block .user-manage-header .user-assets ul li:last-child a img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.dashboard-footer {
+  grid-column: 1/3;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  padding: 0 40px !important;
+}
+.dashboard-footer .dashboard-footer-left, .dashboard-footer .dashboard-footer-right {
+  width: 50%;
+}
+.dashboard-footer .footer-listing ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.dashboard-footer .footer-listing ul li {
+  font-size: 18.913px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.193px;
+  margin-right: 22px;
+}
+.dashboard-footer .footer-listing ul li:last-child {
+  margin-right: 0;
+}
+.dashboard-footer .footer-listing ul li a {
+  color: rgba(174, 174, 174, 0.42);
+}
+
+.socialMedia a {
+  color: #fff !important;
+}
+
+.terms-conditions ul {
+  justify-content: flex-end;
+}
+
+.add-assets-section {
+  min-width: 792.421px !important;
+  padding: 25px 50px;
+  min-height: 500px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+}
+
+.add-assets-block button {
+  border: none;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+}
+.add-assets-block button object {
+  margin-top: 5px;
+}
+.add-assets-block .assets-list {
+  margin: 50px auto;
+  position: relative;
+}
+.add-assets-block .assets-list > ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.add-assets-block .assets-list > ul > li {
+  width: 25%;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  grid-gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+  cursor: pointer;
+}
+.add-assets-block .assets-list > ul > li:last-child {
+  margin-right: 0;
+}
+.add-assets-block .assets-list > ul > li.active object {
+  background: #b5b5b5;
+  border-radius: 50%;
+}
+
+.selectedAssetsForm {
+  position: relative;
+  width: 654px;
+}
+.selectedAssetsForm form input {
+  width: 100%;
+  height: 72px;
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0.55%, rgba(255, 255, 255, 0) 100%);
+  color: #fff;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  border: none;
+  padding: 22px;
+}
+.selectedAssetsForm form input::placeholder {
+  color: #fff;
+}
+.selectedAssetsForm form input:focus {
+  outline: none;
+  border: none;
+}
+
+.asset-name {
+  min-height: 130px;
+  max-height: 150px;
+  overflow: auto;
+  position: relative;
+}
+.asset-name::-webkit-scrollbar, .asset-name::-moz-scrollbar {
+  width: 1em;
+}
+.asset-name::-webkit-scrollbar-track, .asset-name::-moz-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.asset-name::-webkit-scrollbar-thumb, .asset-name::-moz-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+.asset-name ul {
+  inset: 20px;
+  margin: 0;
+}
+.asset-name ul li {
+  padding: 10px 20px;
+  color: #D9D9D9;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  cursor: pointer;
   background-color: #000;
+}
+
+.hiddenLi {
+  display: none;
+}
+
+.equityBlock, .bondsBlock, .cryptoBlock, .cashBlock {
+  display: none;
+  position: absolute;
+  inset: 0;
+}
+
+.currencyForm {
+  padding-top: 20px;
+  display: none;
+}
+.currencyForm form input {
+  width: 100%;
+  height: 72px;
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0.55%, rgba(255, 255, 255, 0) 100%);
+  color: #fff;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  border: none;
+  padding: 22px;
+}
+.currencyForm form input::placeholder {
+  color: #fff;
+}
+.currencyForm form input:focus {
+  outline: none;
+  border: none;
+}
+.currencyForm > h4 {
+  margin-bottom: 1rem;
+  color: #ff8a8a;
+}
+.currencyForm form input {
+  padding: 8px;
+  font-size: 18px;
+  height: auto;
+}
+.currencyForm form label {
+  color: #fff;
+}
+.currencyForm form button {
+  border-radius: 7.565px;
+  background: #000;
+  color: #FFF;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  padding: 12px 32px;
+}
+
+.goBack {
+  display: flex;
+  width: fit-content;
+  padding: 12px 32px;
+  border-radius: 7.565px;
+  border: 1px solid #AEAEAE;
+  margin: 0 auto;
+}
+.goBack a {
+  color: #AEAEAE;
+  font-family: Inter;
+  font-size: 18.913px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.congratulations {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  padding: 36px 60px;
+}
+.congratulations .success-message-container h4 {
+  color: #fff;
+}
+.congratulations .success-message-btn-block {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+.congratulations .success-message-btn-block .addmore-assets {
+  color: #fff;
+}
+.congratulations .success-message-btn-block .addmore-assets .add-assets-btn {
+  padding: 12px 30px;
+  border: 1px solid #000;
+  color: #fff;
 }
 
 footer {
   position: relative;
   margin-top: 70px;
-  background: green;
 }
 footer .footerBlock ul li {
   font-size: 20px;
