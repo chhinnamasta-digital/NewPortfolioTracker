@@ -60,16 +60,32 @@
                         </div>
                     </div>
                     <div class="cashBlock" id="4">
-                        <form action="<?=$_SERVER['PHP_SELF'];?>">
-                            <input type="text" class="search-name" placeholder="cash Search here">
-                        </form>
-                        <div class="asset-name">
-                            <ul id="asset-name-list">                            
+                        <div class="selectCurrency">
+                            <h4>Select your Currency</h4>                                                   
+                            <ul id="asset-name-list"> 
+                                <li>
+                                    <div class="currency-symbol">
+                                        <span>$</span><span>usd</span>
+                                    </div>
+                                </li>                
+                                <li>
+                                    <div class="currency-symbol">
+                                        <span>&#x20A3;</span><span>chf</span>
+                                    </div>
+                                </li>                 
+                                <li>
+                                    <div class="currency-symbol">
+                                        <span>&#x20A4;</span><span>gbp</span>
+                                    </div>
+                                </li>                   
+                                <li>
+                                    <div class="currency-symbol">
+                                        <span>&#x20AC;</span><span>eur</span>
+                                    </div>
+                                </li>                       
                             </ul>
                         </div>
-                    </div>
-                    
-                    
+                    </div>  
                 </div>
             </div>
             <div class="currencyForm">
@@ -79,6 +95,7 @@
                         <label for="staticEmail2">Coin/Token Name</label>
                     </div>
                     <div class="col-6">
+                        <input type="hidden" class="form-control-plaintext" id="user_id" value="<?=$sessionUserId?>">
                         <input type="hidden" class="form-control-plaintext" id="asset_id" >
                         <input type="text" class="form-control-plaintext" id="token_name" >
                     </div>
@@ -89,7 +106,7 @@
                         <input type="date" class="form-control-plaintext" id="date_of_purchase" >
                     </div>
                     <div class="col-6">
-                        <label for="staticEmail2">Price at Time of Purchase</label>
+                        <label for="staticEmail2">Price at Time of Purchase (CHF)</label>
                     </div>
                     <div class="col-6">
                         <input type="text" class="form-control-plaintext" id="price_time_of_purchase" >

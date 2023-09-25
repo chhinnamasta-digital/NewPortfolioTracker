@@ -32,6 +32,8 @@
             return $textArray;
         }
     }
+
+    
     $url_ = domain_url();
 
     

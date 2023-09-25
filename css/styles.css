@@ -467,7 +467,7 @@ main {
 }
 .dashboard-outlet .dashboard-grid {
   display: grid;
-  grid-template-columns: 290px 1fr;
+  grid-template-columns: minmax(320px, auto) 1fr;
   grid-gap: 1rem;
 }
 .dashboard-outlet .dashboard-grid .dashboard-left-side-outlet, .dashboard-outlet .dashboard-grid .dashboard-right-side-outlet {
@@ -496,10 +496,16 @@ main {
 .dashboard-outlet .dashboard-grid .dashboard-left-side-outlet .net-worth h2 {
   color: #000;
   font-family: Inter;
-  font-size: 60.52px;
+  font-size: 2.5vw;
   font-style: normal;
   font-weight: 600;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+.dashboard-outlet .dashboard-grid .dashboard-left-side-outlet .net-worth h2 span:first-child {
+  color: #fff;
+  padding-right: 5px;
 }
 .dashboard-outlet .dashboard-grid .dashboard-left-side-outlet .dashboard-menu ul li {
   font-size: 18.913px;
@@ -725,12 +731,15 @@ main {
 }
 .asset-name ul li {
   padding: 10px 20px;
-  color: #D9D9D9;
+  color: #6e6e6e;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
   cursor: pointer;
   background-color: #000;
+}
+.asset-name ul li b {
+  color: #fff;
 }
 
 .hiddenLi {
@@ -741,6 +750,16 @@ main {
   display: none;
   position: absolute;
   inset: 0;
+}
+.equityBlock h4, .bondsBlock h4, .cryptoBlock h4, .cashBlock h4 {
+  color: #D9D9D9;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.cashBlock {
+  top: 50px;
 }
 
 .currencyForm {
@@ -825,6 +844,10 @@ main {
   padding: 12px 30px;
   border: 1px solid #000;
   color: #fff;
+}
+
+.user_add_assets_list_section {
+  position: relative;
 }
 
 footer {

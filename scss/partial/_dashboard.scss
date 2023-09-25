@@ -8,7 +8,7 @@
     -webkit-backdrop-filter: blur(12px);
     .dashboard-grid{
         display: grid;
-        grid-template-columns: min(290px) 1fr;
+        grid-template-columns: minmax(320px, auto) 1fr;
         grid-gap: 1rem;
         .dashboard-left-side-outlet, .dashboard-right-side-outlet{
             padding: 40px;
@@ -37,10 +37,22 @@
                 }
                 h2{color: #000;
                     font-family: Inter;
-                    font-size: 60.52px;
+                    font-size: 2.5vw;
                     font-style: normal;
                     font-weight: 600;
                     text-transform: uppercase; 
+                    display: flex;
+                    align-items: center;
+                    // justify-content: space-around;
+                    span{
+                        &:first-child{
+                            color: #fff;
+                            padding-right: 5px;
+                        }
+                        &:last-child{
+                            // color: #c1c1c1;
+                        }
+                    }
                 }
             }
             .dashboard-menu{
@@ -290,12 +302,15 @@ $padding: 22px;
         margin: 0;
         li{            
             padding: 10px 20px;
-            color: #D9D9D9;
+            color: #6e6e6e;
             font-size: 24px;
             font-style: normal;
             font-weight: 400;
             cursor: pointer;
             background-color: #000;
+            b{
+                color: #fff;
+            }
         }
     }
 }
@@ -306,6 +321,15 @@ $padding: 22px;
     display: none;
     position: absolute;
     inset: 0;
+    h4{
+        color: #D9D9D9;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+    }
+}
+.cashBlock{
+    top: 50px;
 }
 .currencyForm{
     padding-top: 20px;
@@ -374,4 +398,7 @@ $padding: 22px;
             }
         }
     }
+}
+.user_add_assets_list_section{
+    position: relative;
 }
